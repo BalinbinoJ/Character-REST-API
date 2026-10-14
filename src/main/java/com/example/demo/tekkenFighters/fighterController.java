@@ -9,7 +9,7 @@ import jakarta.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/fighters")
+@RequestMapping("/api/characters")
 public class fighterController {
     
     private final fighterService service;
