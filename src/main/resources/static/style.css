@@ -1,0 +1,26 @@
+body{
+    background-color: black;
+    color: rgb(255, 111, 111);
+}
+
+.task-bar{
+    background-color: rgb(240, 223, 223);
+    color: black;
+    padding: 10px;
+    text-align: center;
+}
+
+.description{
+    color: rgb(247, 247, 247);
+    font-size: 20px;
+    background-color: rgb(22, 22, 22);
+    margin: 20px;
+    padding: 20px;
+}
+
+.character-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
