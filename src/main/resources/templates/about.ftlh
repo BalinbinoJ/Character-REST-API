@@ -11,7 +11,7 @@
     <h3 class="task-bar"> <a href="./index">Home</a>
         <a href="./details">Character Details</a>
         <a href="./new-character-form">Add New Character</a>
-        <a href="./about.html">What this site is about</a>
+        <a href="./about">What this site is about</a>
     </h3>
 
     <h1>About This Site</h1>

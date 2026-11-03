@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add New Character</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
-    <h3 class="task-bar"> <a href="index.html">Home</a>
-    <a href="details.html">Character Details</a>
-    <a href="new-character-form.html">Add New Character</a>
-    <a href="about.html">What this site is about</a>
+    <h3 class="task-bar"> <a href="./index">Home</a>
+    <a href="./details">Character Details</a>
+    <a href="./new-character-form">Add New Character</a>
+    <a href="./about">What this site is about</a>
     </h3>
 
     <h1>Add a New Character</h1>
