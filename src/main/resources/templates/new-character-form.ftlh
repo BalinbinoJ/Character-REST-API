@@ -1,46 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add New Character</title>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
+<#import "layout.ftlh" as l>
+  <@l.page title="add a character" active=(fighterId??)?then('', 'new')>
+<h1>${formTitle}</h1>
+    <form method="post" action="${formAction}" enctype="multipart/form-data" class="form">
 
-    <h3 class="task-bar"> <a href="./index">Home</a>
-    <a href="./details">Character Details</a>
-    <a href="./new-character-form">Add New Character</a>
-    <a href="./about">What this site is about</a>
-    </h3>
-
-    <h1>Add a New Character</h1>
-
-    <img src="Mokujin.jpg" alt="Mokujin from Tekken" height="300" width="300" />
-
-    <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        <p><br/></p>
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" value="${(fighter.name)!''}" required>
 
         <label for="country">Country of Origin:</label>
-        <input type="text" id="country" name="country" required>
-        <p><br/></p>
+        <input id="country" name="country" type="text" value="${(fighter.country)!''}" required>
 
         <label for="fighting-style">Fighting Style:</label>
-        <input type="text" id="fighting-style" name="fighting-style" required>
-        <p><br/></p>
+        <input id="fighting-style" name="fighting-style" type="text" value="${(fighter.fightingStyle)!''}" required>
         
 
         <label for="description">Description:<br/></label>
         <textarea id="description" name="description" required></textarea>
-        <p><br/></p>
+        <input id="description" name="description" type="text" value="${(fighter.description)!''}" required>
 
-        <label for="image">Image URL:<br/></label>
-        <input type="url" id="image" name="image" required>
-        <p><br/></p>
+        <label for="imageFile">Picture (JPEG, PNG, or WebP, up to 1 MB)</label>
+        <#if fighterId??>
+          <img src="/characters/${fighterId?c}/image" alt="Current picture">
+        </#if>
+        <input id="imageFile" name="imageFile" type="file" accept="image/jpeg,image/png,image/webp">
 
-        <button type="submit">Add Character</button>
+        <div>
+          <button type="submit">Save</button>
+          <#if fighterId??>
+            <a href="/characters/${fighterId?c}">Cancel</a>
+            <#else>
+              <a href="/">Cancel</a>
+          </#if>
+        </div>
     </form>
 </body>
 </html>
+</@l.page>

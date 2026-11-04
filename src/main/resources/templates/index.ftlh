@@ -11,11 +11,6 @@
 <body>
     <h1>Welcome to my Tekken character appreciation site!</h1>
 
-    <h3 class="task-bar"> <a href="./index">Home</a>
-    <a href="./details">Character Details</a>
-    <a href="./new-character-form">Add New Character</a>
-    <a href="./about">What this site is about</a>
-    </h3>
 
     <div class="container">
         <form>

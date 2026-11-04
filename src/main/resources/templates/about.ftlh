@@ -1,3 +1,5 @@
+<#import "layout.ftlh" as l>
+  <@l.page title="about" active="about">
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,11 +10,6 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <h3 class="task-bar"> <a href="./index">Home</a>
-        <a href="./details">Character Details</a>
-        <a href="./new-character-form">Add New Character</a>
-        <a href="./about">What this site is about</a>
-    </h3>
 
     <h1>About This Site</h1>
 
@@ -25,3 +22,4 @@
 
 </body>
 </html>
+</@l.page>

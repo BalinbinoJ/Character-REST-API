@@ -14,7 +14,7 @@
 
     <body>
       <header class="task-bar">
-        <a href="/">&#127807; Tekken Characters</a>
+        <a href="/"> Tekken Characters</a>
         <nav>
           <a href="/" class="${(active == 'home')?then('active', '')}">Home</a>
           <a href="/about" class="${(active == 'about')?then('active', '')}">About</a>
@@ -30,7 +30,7 @@
           <#nested>
       </main>
 
-      <footer>Tekken Characters demo &middot; Spring Boot MVC + FreeMarker</footer>
+      <footer>Tekken Characters</footer>
     </body>
 
     </html>
