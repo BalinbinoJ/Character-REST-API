@@ -18,7 +18,7 @@
         <nav>
           <a href="/" class="${(active == 'home')?then('active', '')}">Home</a>
           <a href="/about" class="${(active == 'about')?then('active', '')}">About</a>
-          <a href="/plants/new" class="${(active == 'new')?then('active', '')}">Add a Character</a>
+          <a href="/characters/new" class="${(active == 'new')?then('active', '')}">Add a Character</a>
         </nav>
       </header>
 

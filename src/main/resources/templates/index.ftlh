@@ -1,3 +1,5 @@
+<#import "layout.ftlh" as l>
+  <@l.page title="Tekken Characters" active="home">
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,3 +55,4 @@
 
 </body>
 </html>
+</@l.page>
