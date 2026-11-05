@@ -3,6 +3,7 @@
 # Tekken Character API
 
 Character REST API for Tekken fan-site that lists different characters in the series and their profiles, including names, ids, country of origin, fighting style, and a description. Built with Spring Boot using a layered architecture. Data is stored in PostgreSQL (Neon).
+The API is now linked with the static page, transforming the static html pages into ftlh files. This enables any users to add, delete, or update characters on the site.
 
 ## Data Model
 
