@@ -74,12 +74,16 @@ public class fighterUiController {
         return "about";
     }
 
-    @GetMapping("/{id}")
-    public String details(@PathVariable long id, Model model){
-        fighter fighter = service.findById(id);
-
-        model.addAttribute("char", fighter);
-
-        return "details";
+    @GetMapping("/characters/{id}")
+  public String details(@PathVariable Long id, Model model) {
+    try {
+      fighter fighter = service.findById(id);
+      model.addAttribute("character", fighter);
+      return "details"; // templates/details.ftlh
+    } catch (RuntimeException exception) {
+      model.addAttribute("errorMessage",
+          exception.getMessage() == null ? "Fighter not found" : exception.getMessage());
+      return "error"; // templates/error.ftlh
     }
+  }
 }

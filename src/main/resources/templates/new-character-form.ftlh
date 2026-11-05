@@ -13,7 +13,7 @@
         <input id="fighting-style" name="fighting-style" type="text" value="${(fighter.fightingStyle)!''}" required>
         
 
-        <label for="description">Description:<br/></label>
+        <label for="description">Description:</label>
         <textarea id="description" name="description" required></textarea>
         <input id="description" name="description" type="text" value="${(fighter.description)!''}" required>
 

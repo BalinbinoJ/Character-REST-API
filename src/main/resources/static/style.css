@@ -24,3 +24,30 @@ body{
     gap: 20px;
     padding: 20px;
 }
+
+.actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+    .button {
+  display: inline-block;
+  padding: 8px 16px;
+  background: #2f855a;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.hero {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #d9e2dc;
+}
