@@ -1,6 +1,3 @@
-<#-- Shared page layout. Every page calls this macro, so the head and the navigation exist in ONE place. Usage in a
-  page: <#import "layout.ftlh" as l>
-  <@l.page title="Home" active="home"> ...page content... </@l.page> -->
   <#macro page title active="">
     <!DOCTYPE html>
     <html lang="en">
@@ -23,7 +20,6 @@
       </header>
 
       <main>
-        <#-- A flash message survives exactly one redirect (see RedirectAttributes in the controller). -->
           <#if message??>
             <p>${message}</p>
           </#if>

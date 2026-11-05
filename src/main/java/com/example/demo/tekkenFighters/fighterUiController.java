@@ -2,7 +2,6 @@ package com.example.demo.tekkenFighters;
 
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import jakarta.validation.Valid;
 import org.springframework.ui.Model;
@@ -14,7 +13,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 
 @Controller
-//@RequestMapping("/characters")
 public class fighterUiController {
 
     private final fighterService service;
@@ -30,7 +28,7 @@ public class fighterUiController {
     model.addAttribute("characters", service.search(name, fightingStyle));
     model.addAttribute("name", name == null ? "" : name);
     model.addAttribute("selectedFightingStyle", fightingStyle == null ? "" : fightingStyle);
-    return "index"; // templates/index.ftlh
+    return "index";
   }
 
   @GetMapping("/characters/new")
@@ -39,7 +37,7 @@ public class fighterUiController {
     model.addAttribute("character", fighter);
     model.addAttribute("formTitle", "Add a Fighter");
     model.addAttribute("formAction", "/characters");
-    return "fighter-form";
+    return "new-character-form";
   }
 
   @PostMapping("/characters")
@@ -49,12 +47,12 @@ public class fighterUiController {
   }
 
   @GetMapping("/characters/{id}/edit")
-  public String editForm(@PathVariable Long id, Model model) {
+  public String editForm(@PathVariable() Long id, Model model) {
     fighter fighter = service.findById(id);
-    model.addAttribute("character", fighter);
+    model.addAttribute("fighter", fighter);
     model.addAttribute("formTitle", "Edit Fighter");
     model.addAttribute("formAction", "/characters/" + id);
-    return "fighter-form";
+    return "new-character-form";
   }
 
     @PostMapping("/characters/{id}")
@@ -79,11 +77,11 @@ public class fighterUiController {
     try {
       fighter fighter = service.findById(id);
       model.addAttribute("character", fighter);
-      return "details"; // templates/details.ftlh
+      return "details";
     } catch (RuntimeException exception) {
       model.addAttribute("errorMessage",
           exception.getMessage() == null ? "Fighter not found" : exception.getMessage());
-      return "error"; // templates/error.ftlh
+      return "error";
     }
   }
 }

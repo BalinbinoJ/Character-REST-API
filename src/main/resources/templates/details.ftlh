@@ -16,7 +16,6 @@
 
         <div class="actions">
           <a href="/characters/${character.id?c}/edit" class="button">Edit</a>
-          <#-- HTML forms can only send GET and POST, so delete is a POST to its own URL. -->
             <form method="post" action="/characters/${character.id?c}/delete" onsubmit="return confirm('Remove this character?');">
               <button type="submit" class="button">Delete</button>
             </form>

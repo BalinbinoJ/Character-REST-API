@@ -27,6 +27,7 @@
             <h3><a href="/characters/${character.id?c}">${character.name}</a></h3>
             <p class="meta">Fighting Style: ${character.fightingStyle}</p>
             <p class="meta">Country of Origin: ${character.country}</p>
+            <p class="meta">Description: ${character.description}</p>
           </div>
         </article>
         <#else>
