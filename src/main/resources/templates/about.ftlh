@@ -1,15 +1,6 @@
 <#import "layout.ftlh" as l>
   <@l.page title="about" active="about">
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About This Site</title>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
 
     <h1>About This Site</h1>
 
@@ -20,6 +11,28 @@
         that passion with the world. I also wanted to show how much of a loser Kazuya is, he's lame.
     </p>
 
-</body>
-</html>
+<p>Tekken Characters demo. The same database and the same service layer power <strong>two front ends</strong>:
+     a JSON API for programs, and the HTML pages you are looking at now for people.</p>
+
+
+  <h2>How a page request flows</h2>
+  <ol>
+    <li>The browser requests a URL, for example <code>/characters/3</code>.</li>
+    <li>A <code>@Controller</code> method runs, asks the service for data, and puts it in the <code>Model</code>.</li>
+    <li>The controller returns a view name. Spring renders the matching FreeMarker template.</li>
+    <li>The browser receives HTML.</li>
+  </ol>
+
+  <h2>Two front ends, one backend</h2>
+  <table>
+    <thead><tr><th></th><th>Web pages</th><th>JSON API</th></tr></thead>
+    <tbody>
+      <tr><td>Controller</td><td><code>FighterUiController</code></td><td><code>FighterController</code></td></tr>
+      <tr><td>URLs</td><td><code>/</code>, <code>/characters/...</code>, <code>/about</code></td><td><code>/api/characters/...</code></td></tr>
+      <tr><td>Returns</td><td>HTML from templates</td><td>JSON</td></tr>
+      <tr><td>Calls</td><td colspan="2">the same <code>FighterService</code> and <code>FighterRepository</code></td></tr>
+    </tbody>
+  </table>
+
+  <p>Pictures are saved in a static directory.</p>
 </@l.page>
